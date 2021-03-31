@@ -26,7 +26,7 @@ class Scenario(ScenarioGenerator):
         if(kwargs['randomPosition']):
             egostart, targetstart, npc_spawns = util.get_random_spawn_points(kwargs['initialOffset'],kwargs['check_lane'])
         else:
-            #put a default position here
+            #put a default position here (es. pyoscx.TeleportAction(pyoscx.WorldPosition(-8.6,-80,0.5,4.7)))
             print("default position not setted")
             exit
         
@@ -88,12 +88,6 @@ class Scenario(ScenarioGenerator):
         env=pyoscx.Environment("Environment1",timeofday,weather,roadcond)
         envAct= pyoscx.EnvironmentAction("Environment1", env)
 
-        #targetstart = pyoscx.TeleportAction(pyoscx.WorldPosition(-8.6,-80,0.5,4.7))
-
-        #egostart = pyoscx.TeleportAction(pyoscx.WorldPosition(-9.4,-152.8,0.5,1.57079632679))
-        #egostart = pyoscx.TeleportAction(pyoscx.WorldPosition(-8.6,80,0.5,4.7))
-        #egospeed = pyoscx.AbsoluteSpeedAction(0.1,pyoscx.TransitionDynamics(pyoscx.DynamicsShapes.step,pyoscx.DynamicsDimension.distance,10))
-        
         ### create init
         init = pyoscx.Init()
 
@@ -139,7 +133,6 @@ class Scenario(ScenarioGenerator):
 
         speed_kmh = 3.6*kwargs['approachSpeed']
         braking_distance = (speed_kmh/10)*(speed_kmh/10)+(speed_kmh/10*1.5)
-        #braking_distance2 = (speed_kmh/10)*(speed_kmh/10)
 
         trigcond = pyoscx.RelativeDistanceCondition(braking_distance,pyoscx.Rule.lessThan, pyoscx.RelativeDistanceType.cartesianDistance,targetname,freespace=False)
         trigger = pyoscx.EntityTrigger('distancetrigger',0.0,pyoscx.ConditionEdge.none,trigcond,egoname)
@@ -163,9 +156,9 @@ class Scenario(ScenarioGenerator):
 
         act_stopCondGroup = pyoscx.ConditionGroup('stop')
         #stoptrigcond = pyoscx.RelativeDistanceCondition(15, pyoscx.Rule.lessThan, pyoscx.RelativeDistanceType.cartesianDistance,targetname,freespace=False)
-        stoptrigcond1 = pyoscx.StandStillCondition(5)
-        stoptrigcond2 = pyoscx.TraveledDistanceCondition(15.0)
-        distance_stoptrigger = pyoscx.EntityTrigger('EndCondition',0,pyoscx.ConditionEdge.rising,stoptrigcond1,egoname, triggeringpoint='stop')
+        #stoptrigcond1 = pyoscx.StandStillCondition(5)
+        #stoptrigcond2 = pyoscx.TraveledDistanceCondition(15.0)
+        #distance_stoptrigger = pyoscx.EntityTrigger('EndCondition',0,pyoscx.ConditionEdge.rising,stoptrigcond1,egoname, triggeringpoint='stop')
         timeout_stoptrigger = pyoscx.ValueTrigger('StopCondition',0,pyoscx.ConditionEdge.rising,pyoscx.SimulationTimeCondition(15,pyoscx.Rule.greaterThan), triggeringpoint='stop')
         act_stopCondGroup.add_condition(timeout_stoptrigger)
         #act_stopCondGroup.add_condition(distance_stoptrigger)

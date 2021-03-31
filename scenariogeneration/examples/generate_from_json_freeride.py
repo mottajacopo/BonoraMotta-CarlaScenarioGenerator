@@ -24,9 +24,9 @@ class Scenario(ScenarioGenerator):
 
         #get random position for ego, target and npcs
         if(kwargs['randomPosition']):
-            egostart, targetstart, npc_spawns = util.get_random_spawn_points( 150,kwargs['check_lane'])
+            egostart, _, npc_spawns = util.get_random_spawn_points( 150,kwargs['check_lane'])
         else: 
-            #put a default position here
+            #put a default position here (es. pyoscx.TeleportAction(pyoscx.WorldPosition(-8.6,-80,0.5,4.7)))
             print("default position not setted")
             exit
         
@@ -77,10 +77,6 @@ class Scenario(ScenarioGenerator):
         env=pyoscx.Environment("Environment1",timeofday,weather,roadcond)
         envAct= pyoscx.EnvironmentAction("Environment1", env)
 
-        #default egostart if random position is false
-        #egostart = pyoscx.TeleportAction(pyoscx.WorldPosition(-8.6,80,0.5,4.7))
-
-
         ### create init
         init = pyoscx.Init()
 
@@ -127,8 +123,8 @@ class Scenario(ScenarioGenerator):
         act_starttrigger = pyoscx.ValueTrigger('starttrigger',0,pyoscx.ConditionEdge.rising,pyoscx.SimulationTimeCondition(0,pyoscx.Rule.greaterThan))
 
         act_stopCondGroup = pyoscx.ConditionGroup('stop')
-        stoptrigcond = pyoscx.TraveledDistanceCondition(150.0)
-        distance_stoptrigger = pyoscx.EntityTrigger('EndCondition',0,pyoscx.ConditionEdge.rising,stoptrigcond,egoname, triggeringpoint='stop')
+        #stoptrigcond = pyoscx.TraveledDistanceCondition(150.0)
+        #distance_stoptrigger = pyoscx.EntityTrigger('EndCondition',0,pyoscx.ConditionEdge.rising,stoptrigcond,egoname, triggeringpoint='stop')
         timeout_stoptrigger = pyoscx.ValueTrigger('StopCondition',0,pyoscx.ConditionEdge.rising,pyoscx.SimulationTimeCondition(10,pyoscx.Rule.greaterThan), triggeringpoint='stop')
         act_stopCondGroup.add_condition(timeout_stoptrigger)
         #act_stopCondGroup.add_condition(distance_stoptrigger)

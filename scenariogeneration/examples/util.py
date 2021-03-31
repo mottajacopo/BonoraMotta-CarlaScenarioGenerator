@@ -14,6 +14,8 @@ client.set_timeout(5.0)
 world = client.get_world()
 iteration = -1
 
+
+# load correct map #########################################################################################################################
 def check_town(town):
     current_map = world.get_map()
 
@@ -24,6 +26,7 @@ def check_town(town):
         time.sleep(10)
 
 
+# shift position to a side lane #########################################################################################################################
 def shift_lane(pos, direction):
     current_map = world.get_map()
 
@@ -46,7 +49,8 @@ def shift_lane(pos, direction):
     return new_pos
 
 
-def get_random_spawn_points(offset, check_lane):   #get spawn points for ego, adversary and npcs
+#get spawn points for ego, adversary and npcs #########################################################################################################################
+def get_random_spawn_points(offset, check_lane):   
 
     current_map = world.get_map()
 
@@ -94,7 +98,8 @@ def get_random_spawn_points(offset, check_lane):   #get spawn points for ego, ad
     return back_start, front_start, npc_spawns 
 
 
-def get_random_vehicles():   #get random vehicle name
+#get random vehicle name  #########################################################################################################################
+def get_random_vehicles():   
 
     blueprint_library = world.get_blueprint_library()
 
@@ -118,7 +123,8 @@ def get_random_vehicles():   #get random vehicle name
     return vehicle_name
 
 
-def get_offset_waypoint(waypoint_ego, offset):   #computer offset waypoint
+#computer offset waypoint #########################################################################################################################
+def get_offset_waypoint(waypoint_ego, offset): 
     waypoint = waypoint_ego
     traveled_distance = 0
     distance = offset
@@ -129,7 +135,8 @@ def get_offset_waypoint(waypoint_ego, offset):   #computer offset waypoint
     return waypoint
 
 
-def carla2pyxosc(spawn):   #convert carla location to pyxosc
+#convert carla location to pyxosc #########################################################################################################################
+def carla2pyxosc(spawn):   
 
     x = spawn.location.x
     y = spawn.location.y *(-1)  #multiply for -1 because of carla bug
@@ -139,6 +146,7 @@ def carla2pyxosc(spawn):   #convert carla location to pyxosc
     return pyoscx.TeleportAction(pyoscx.WorldPosition(x, y, z, h))
 
 
+# generate npcs positions #########################################################################################################################
 def get_random_npc_spawn(current_map, ego_spawn,radius, offset, check_lane):
 
     npc_spawns = []

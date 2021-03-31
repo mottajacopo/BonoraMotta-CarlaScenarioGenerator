@@ -26,7 +26,7 @@ class Scenario(ScenarioGenerator):
         if(kwargs['randomPosition']):
             targetstart, egostart, npc_spawns = util.get_random_spawn_points( kwargs['initialOffset'],kwargs['check_lane'])   #inverto posizioni di ego rispetto a adversary per il cutin
         else:
-            #put a default position here
+            #put a default position here (es. pyoscx.TeleportAction(pyoscx.WorldPosition(-8.6,-80,0.5,4.7)))
             print("default position not setted")
             exit
 
@@ -87,11 +87,6 @@ class Scenario(ScenarioGenerator):
             weather=pyoscx.Weather(pyoscx.CloudState.free,1,0,1,pyoscx.PrecipitationType.dry,1,100000)
         env=pyoscx.Environment("Environment1",timeofday,weather,roadcond)
         envAct= pyoscx.EnvironmentAction("Environment1", env)
-
-
-        #targetstart = pyoscx.TeleportAction(pyoscx.WorldPosition(-8.6,-80,0.5,4.7))
-        #step_time = pyoscx.TransitionDynamics(pyoscx.DynamicsShapes.step,pyoscx.DynamicsDimension.time,1)
-        #targetspeed = pyoscx.AbsoluteSpeedAction(15,step_time)
 
         #egostart = pyoscx.TeleportAction(pyoscx.WorldPosition(-2.6,80,0.5,4.7))
         egospeed = pyoscx.AbsoluteSpeedAction(kwargs['approachSpeed']/2,pyoscx.TransitionDynamics(pyoscx.DynamicsShapes.step,pyoscx.DynamicsDimension.distance,10))
