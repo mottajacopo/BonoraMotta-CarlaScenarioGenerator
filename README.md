@@ -6,12 +6,16 @@
 	Carca documentation             https://carla.readthedocs.io/en/latest/  
 	Scenario Runner github          https://github.com/carla-simulator/scenario_runner  
 	Scenario Runner documentation   https://carla-scenariorunner.readthedocs.io/en/latest/  
+	Pyoscx github                   https://github.com/pyoscx/pyoscx
+	ScenarioGeneration              https://github.com/pyoscx/scenariogeneration
 
 **Downloads:**  
 	Carla 0.9.11                    https://github.com/carla-simulator/carla/releases/tag/0.9.11  
 	Scenario Runner 0.9.11 		https://github.com/carla-simulator/scenario_runner/releases/tag/v0.9.11
 
-**Installazione:**  
+# Carla
+
+**Installazione :**  
 - scaricare e estrarre CARLA_0.9.11.zip 
 - scaricare AdditionalMaps_0.9.11.zip e estrarre nella cartella di Carla
 - editare variabili di sistema:
@@ -25,8 +29,7 @@ Modificare il path della variabile di ambiente in base alla coppia (carla + scen
 Occorre che la versione di carla in uso sia nella cartella C:\Carla0.9.11 .  
 Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di ambiente PYTHONPATH con il numero di versione corretto.  
      
-     
-# Carla guide
+ # Carla usage
 
 **1-** Aprire il cmd nella cartella di Carla (sul desktop)
 	Lanciare il server con il seguente comando:
