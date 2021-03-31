@@ -62,3 +62,5 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
 
 
 # Scenario Generation
+
+- clonare questa repo github
