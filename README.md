@@ -25,7 +25,7 @@ Modificare il path della variabile di ambiente in base alla coppia (carla + scen
 Occorre che la versione di carla in uso sia nella cartella C:\Carla0.9.11 .  
 Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di ambiente PYTHONPATH con il numero di versione corretto.  
      
- # Carla: guida all'utilizzo
+**Utilizzo :**  
 
 **1-** Aprire il cmd nella cartella di Carla (sul desktop)
 	Lanciare il server con il seguente comando:
@@ -68,4 +68,6 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
 - clonare questa repo github
 - copiare le cartelle contenute custom files nelle cartelle corrispondenti (Carla0.9.11, scenario_runner, pyoscx)  
   (i file contenuti sono file modificati necessari al corretto funzionamento del tool)  
+  
+ **Utilizzo :**  
 
