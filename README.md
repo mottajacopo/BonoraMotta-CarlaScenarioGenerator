@@ -81,6 +81,6 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
  **Utilizzo - riproduzione degli scenari:**  
  
  - recarsi nella cartella scenario_runner 
- - lanciare il file loop corrispondente aglio scenari generati da riprodurre
+ - lanciare il file loop corrispondente agli scenari generati da riprodurre
  - i video verranno salvati nella cartella _out
 
