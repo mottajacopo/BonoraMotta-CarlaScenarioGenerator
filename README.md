@@ -25,7 +25,7 @@ Modificare il path della variabile di ambiente in base alla coppia (carla + scen
 Occorre che la versione di carla in uso sia nella cartella C:\Carla0.9.11 .  
 Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di ambiente PYTHONPATH con il numero di versione corretto.  
      
- # Carla: guida all'utilizzo
+**Utilizzo standard:**  
 
 **1-** Aprire il cmd nella cartella di Carla (sul desktop)
 	Lanciare il server con il seguente comando:
@@ -54,6 +54,7 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
 
 **6-** Una volta nel client:
 
+	 WASD         : manual control of the ego vehicle
 	 P            : toggle autopilot
  	 TAB          : change sensor position (mettere camera frontale)
      C            : change weather (funziona se dynamic weather è disabilitato)
@@ -62,3 +63,20 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
 
 
 # Scenario Generation
+
+**Installazione :**  
+- clonare questa repo github che contiene versioni custom di scenario_runner e scenariogeneration
+- installare pyoscx (pip install pyoscx) 
+  (potrebbe essere non più possibile, in caso installare scenariogeneration (pip install scenariogeneration))
+- copiare le cartelle contenute custom files nelle cartelle corrispondenti (Carla0.9.11, pyoscx)  
+  (i file contenuti sono file modificati necessari al corretto funzionamento del tool)  
+  
+ **Utilizzo - generazione degli scenari:**  
+ 
+ - recarsi nella cartella scenariogeneration/examples
+ - editare il file di configurazione dello scenario da generare
+ - lanciare il file di generazione corrispondente
+ - i file openscenario prodotti saranno nella cartella nominata come lo scenario scelto
+ 
+ **Utilizzo - riproduzione degli scenari:**  
+
