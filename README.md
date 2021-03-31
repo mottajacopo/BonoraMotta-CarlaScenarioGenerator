@@ -8,7 +8,8 @@ Questa repo implementa la generazione di scenari di guida descritti in formato o
 	Scenario Runner 0.9.11 		https://github.com/carla-simulator/scenario_runner/releases/tag/v0.9.11  
 	Scenario Runner documentation   https://carla-scenariorunner.readthedocs.io/en/latest/  
 	Pyoscx github                   https://github.com/pyoscx/pyoscx  
-	ScenarioGeneration              https://github.com/pyoscx/scenariogeneration
+	ScenarioGeneration              https://github.com/pyoscx/scenariogeneration   
+	ffmpeg                          https://ffmpeg.org/download.html#build-windows
 
 # Carla
 
