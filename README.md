@@ -69,5 +69,7 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
 - copiare le cartelle contenute custom files nelle cartelle corrispondenti (Carla0.9.11, scenario_runner, pyoscx)  
   (i file contenuti sono file modificati necessari al corretto funzionamento del tool)  
   
- **Utilizzo :**  
+ **Utilizzo - generazione degli scenari:**  
+ 
+  **Utilizzo - riproduzione degli scenari:**  
 
