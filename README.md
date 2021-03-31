@@ -11,11 +11,11 @@
 	Carla 0.9.11                    https://github.com/carla-simulator/carla/releases/tag/0.9.11  
 	Scenario Runner 0.9.11 		https://github.com/carla-simulator/scenario_runner/releases/tag/v0.9.11
 
-**Installation:**  
-- extract Carla release and Scenario runner (release or cloned repo)
-- update system environment variables:
-       add a variable named PYTHONPATH with the following paths changing the path according 
-       to the arrangement of your folders and the version of carla you want to use: 
+**Installazione:**  
+- estrarre Carla e scenario_runner (release)
+- editare variabili di sistema:
+       aggiungere una variabile chiamata PYTHONPATH con i seguenti percorsi in base
+       alla disposizione delle proprie cartelle e alla versione di carla che si vuole utilizzare:
        
      ![PYTHONPATH](https://github.com/mottajacopo/MottaBonora-CarlaSim/blob/main/PYTHONPATH.PNG)
      
