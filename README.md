@@ -54,8 +54,8 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
 
 **6-** Una volta nel client:
 
-	 P            : toggle autopilot
 	 WASD         : manual control of the ego vehicle
+	 P            : toggle autopilot
  	 TAB          : change sensor position (mettere camera frontale)
      C            : change weather (funziona se dynamic weather è disabilitato)
      F1           : toggle HUD
