@@ -65,11 +65,18 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
 # Scenario Generation
 
 **Installazione :**  
-- clonare questa repo github
-- copiare le cartelle contenute custom files nelle cartelle corrispondenti (Carla0.9.11, scenario_runner, pyoscx)  
+- clonare questa repo github che contiene versioni custom di scenario_runner e scenariogeneration
+- installare pyoscx (pip install pyoscx) 
+  (potrebbe essere non più possibile, in caso installare scenariogeneration (pip install scenariogeneration))
+- copiare le cartelle contenute custom files nelle cartelle corrispondenti (Carla0.9.11, pyoscx)  
   (i file contenuti sono file modificati necessari al corretto funzionamento del tool)  
   
  **Utilizzo - generazione degli scenari:**  
  
-  **Utilizzo - riproduzione degli scenari:**  
+ - recarsi nella cartella scenariogeneration/examples
+ - editare il file di configurazione dello scenario da generare
+ - lanciare il file di generazione corrispondente
+ - i file openscenario prodotti saranno nella cartella nominata come lo scenario scelto
+ 
+ **Utilizzo - riproduzione degli scenari:**  
 
