@@ -12,6 +12,8 @@
 	Scenario Runner 0.9.11 		https://github.com/carla-simulator/scenario_runner/releases/tag/v0.9.11
 
 **Installazione:**  
+- scaricare CARLA_0.9.11.zip 
+- scaricare AdditionalMaps_0.9.11.zip e copiare nella cartella ci Carla
 - estrarre Carla (release)
 - editare variabili di sistema:
        aggiungere una variabile chiamata PYTHONPATH con i seguenti percorsi in base
