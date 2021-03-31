@@ -33,9 +33,9 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
 	CarlaUE4.exe -quality-level=High
 
 **2-** Aprire il cmd nella cartella PythonAPI/util
-	Lanciare il seguente comando per scegliere la mappa (la milgiore è town05):
+	Lanciare il seguente comando per scegliere la mappa:
 	
-	python config.py --map Town05
+	python config.py --map Town04
 
 **3-** Aprire il cmd nella cartella PythonAPI/examples
 	Lanciare il seguente comando per polopare la mappa:
