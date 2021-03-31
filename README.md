@@ -32,22 +32,22 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
 	
 	CarlaUE4.exe -quality-level=High
 
-**2-** Aprire il cmd nella cartella PythonAPI/util
+**2-** Aprire il cmd nella cartella PythonAPI\util
 	Lanciare il seguente comando per scegliere la mappa:
 	
 	python config.py --map Town04
 
-**3-** Aprire il cmd nella cartella PythonAPI/examples
+**3-** Aprire il cmd nella cartella PythonAPI\examples
 	Lanciare il seguente comando per polopare la mappa:
 	
 	python spawn_npc.py -n 50 -w 15    #spawna 50 vehicles and 15 pedestrians
 
-**4-** Aprire il cmd nella cartella PythonAPI/examples
+**4-** Aprire il cmd nella cartella PythonAPI\examples
 	Lanciare il seguente comando per abilitare il meteo e l'ora del giorno dinamica:
 	
 	python dynamic_weather.py
 
-**5-** Aprire il cmd nella cartella PythonAPI/examples
+**5-** Aprire il cmd nella cartella PythonAPI\examples
 	Lanciare il seguente comando per avviare il client in guida manuale
 	
 	python manual_control.py 
@@ -73,6 +73,7 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
   
  **Utilizzo - generazione degli scenari:**  
  
+ - lanciare il server di Carla eseguendo il file C:\Carla0.9.11\CarlaUE4.exe
  - recarsi nella cartella scenariogeneration/examples
  - editare il file di configurazione dello scenario da generare
  - lanciare il file di generazione corrispondente
@@ -80,6 +81,7 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
  
  **Utilizzo - riproduzione degli scenari:**  
  
+ - lanciare il server di Carla eseguendo il file C:\Carla0.9.11\CarlaUE4.exe
  - recarsi nella cartella scenario_runner 
  - lanciare il file loop corrispondente agli scenari generati da riprodurre
  - i video verranno salvati nella cartella _out
