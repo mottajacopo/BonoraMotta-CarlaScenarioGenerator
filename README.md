@@ -13,7 +13,7 @@
 
 **Installazione:**  
 - scaricare CARLA_0.9.11.zip 
-- scaricare AdditionalMaps_0.9.11.zip e copiare nella cartella ci Carla
+- scaricare AdditionalMaps_0.9.11.zip e copiare nella cartella di Carla
 - estrarre Carla (release)
 - editare variabili di sistema:
        aggiungere una variabile chiamata PYTHONPATH con i seguenti percorsi in base
