@@ -1,0 +1,31 @@
+{
+    "Parameters": [
+        {
+            "Town": [
+                "Town04"
+            ],
+            "approachSpeed": [
+                10, 15
+            ],
+            "isRaining": [
+                true
+            ],
+            "hourOfDay": [
+                12
+            ],
+            "randomPosition": [
+                true
+            ],
+            "initialOffset": [
+                50
+            ],
+            "repetitions": [
+                4
+            ],
+            "npc_number": [
+                20
+            ],
+            "check_lane": ["left"]
+        }
+    ]
+}

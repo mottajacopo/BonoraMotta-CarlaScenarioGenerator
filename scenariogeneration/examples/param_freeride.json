@@ -1,0 +1,25 @@
+{
+    "Parameters": [
+        {
+            "Town": [
+                "Town06"
+            ],
+            "randomPosition": [
+                true
+            ],
+            "isRaining": [
+                false
+            ],
+            "hourOfDay": [
+                15
+            ],
+            "repetitions": [
+                50
+            ],
+            "npc_number": [
+                0
+            ],
+            "check_lane": ["central"]
+        }
+    ]
+}
