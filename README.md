@@ -1,5 +1,6 @@
 # MottaBonora-CarlaScenarioGenerator
 
+Questa repo implementa la generazione di scenari di guida descritti in formato openscenario, li riproduce sul simulatore Carla e salva le esecuzioni in formato video.
 
 **Links:**  
 	Carla 0.9.11                    https://github.com/carla-simulator/carla/releases/tag/0.9.11  
@@ -66,8 +67,8 @@ Di conseguenza occorre anche modificare il nome del file .EGG nella variabile di
 
 **Installazione :**  
 - clonare questa repo github che contiene versioni custom di scenario_runner e scenariogeneration
-- installare pyoscx (pip install pyoscx) 
-  (potrebbe essere non più possibile, in caso installare scenariogeneration (pip install scenariogeneration))
+- installare pyoscx (pip install pyoscx)  
+  (potrebbe essere non più possibile, in caso installare scenariogeneration (pip install scenariogeneration))  
 - copiare le cartelle contenute custom files nelle cartelle corrispondenti (Carla0.9.11, pyoscx)  
   (i file contenuti sono file modificati necessari al corretto funzionamento del tool)  
   
