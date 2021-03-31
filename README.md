@@ -18,7 +18,7 @@
        aggiungere una variabile chiamata PYTHONPATH con i seguenti percorsi in base
        alla disposizione delle proprie cartelle e alla versione di carla che si vuole utilizzare:
        
-     ![PYTHONPATH](https://github.com/mottajacopo/MottaBonora-CarlaSim/blob/main/PYTHONPATH.PNG)
+     ![PYTHONPATH](https://github.com/mottajacopo/MottaBonora-CarlaScenarioGenerator/blob/main/images/pythonpath.png)
      
 Nota:  
 Modificare il path della variabile di ambiente in base alla coppia (carla + scenario runner) di versioni che si vuole usare.   
