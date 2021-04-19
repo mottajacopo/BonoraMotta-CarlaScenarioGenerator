@@ -89,7 +89,7 @@ Occorre che la versione di carla in uso sia nella cartella C:\Carla0.9.11 .
  - i video verranno salvati nella cartella _out
 
 
-**File di configurazione scenari
+**File di configurazione scenari   
 Map:            [Town01..06] mappa utilizzata all'interno dello scenario.
 
 IsRaining:      [T,F] booleano che modifica l'environment all'interno del file di configurazione
