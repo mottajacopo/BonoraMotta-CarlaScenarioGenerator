@@ -88,8 +88,7 @@ Occorre che la versione di carla in uso sia nella cartella C:\Carla0.9.11 .
  - lanciare il file loop corrispondente agli scenari generati da riprodurre
  - i video verranno salvati nella cartella _out
 
-
-**File di configurazione scenari**   
+# Esempio di file di configurazione scenari   
 
 **Map:**             [Town01..06] mappa caricata nella quale si svolge lo scenario.
 
@@ -97,15 +96,15 @@ Occorre che la versione di carla in uso sia nella cartella C:\Carla0.9.11 .
 
 **Hour:**  	        [0..24] specifica l'orario del giorno in formato 24h.
 
-**ApproachSpeed:**   [int] velocitĂ  iniziale dell'EGO vehicle.
+**ApproachSpeed:**   [int] velocità iniziale dell'EGO vehicle.
 
-**RandomPos:** 	[True,False] booleano che attiva lo spawn randomico dei veicoli.
+**RandomPosition:** 	[True,False] booleano che attiva lo spawn randomico dei veicoli.
 
-**InitOffs:** 	[int] distanza iniziale tra i due veicoli di riferimento ( EGO & ADV).
+**InitialOffset:** 	[int] distanza iniziale tra i due veicoli di riferimento ( EGO & ADV).
 
 **NPC Num:** 	[int] numero di veicoli di contorno ininfluenti.
 
-**scenario_lane:** 	[left,right] Corsia interessata dall'esecuzione dello scenario .
+**Scenario_lane:** 	[left,right] Corsia interessata dall'esecuzione dello scenario .
 
 **Iteration:** 	[int] numero di ripetizioni per ogni combinazione di parametri all'interno del config_file.
 
