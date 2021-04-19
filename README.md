@@ -88,7 +88,7 @@ Occorre che la versione di carla in uso sia nella cartella C:\Carla0.9.11 .
  - lanciare il file loop corrispondente agli scenari generati da riprodurre
  - i video verranno salvati nella cartella _out
 
-# Esempio di file di configurazione scenari   
+# Spiegazione parametri di configurazione scenari   
 
 **Map:**             [Town01..06] mappa caricata nella quale si svolge lo scenario.
 
