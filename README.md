@@ -88,3 +88,24 @@ Occorre che la versione di carla in uso sia nella cartella C:\Carla0.9.11 .
  - lanciare il file loop corrispondente agli scenari generati da riprodurre
  - i video verranno salvati nella cartella _out
 
+
+**File di configurazione scenari
+Map:            [Town01..06] mappa utilizzata all'interno dello scenario.
+
+IsRaining:      [T,F] booleano che modifica l'environment all'interno del file di configurazione
+	        dello scenario attivando la pioggia.
+
+Hour: 	        [0..24] specifica l'orario del giorno in formato 24h.
+
+ApproachSpeed:  [int] velocitĂ  iniziale dell'EGO vehicle.
+
+RandomPos:	[T,F] booleano che attiva lo spawn randomico dell'EGO.
+
+InitOffs:	[int] distanza iniziale tra i due veicoli di riferimento ( EGO & ADV).
+
+NPC Num:	[int] numero di veicoli di contorno ininfluenti.
+
+check_lane:	[left,right] Controllo sulle corsie adiacenti all'EGO.
+
+Iteration:	[int] numero di iterazioni per ogni combinazione di parametri all'interno del config_file.
+
