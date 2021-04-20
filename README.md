@@ -106,5 +106,5 @@ Occorre che la versione di carla in uso sia nella cartella C:\Carla0.9.11 .
 
 **Scenario_lane:** 	[left,right] Corsia interessata dall'esecuzione dello scenario .
 
-**Iteration:** 	[int] numero di ripetizioni per ogni combinazione di parametri all'interno del config_file.
+**Repetitions:** 	[int] numero di ripetizioni per ogni combinazione di parametri all'interno del config_file.
 
