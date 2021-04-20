@@ -24,13 +24,13 @@ class Scenario(ScenarioGenerator):
 
         #get random position for ego, target and npcs
         if(kwargs['randomPosition']):
-            targetstart, egostart, npc_spawns = util.get_random_spawn_points( kwargs['initialOffset'],kwargs['check_lane'])   #inverto posizioni di ego rispetto a adversary per il cutin
+            targetstart, egostart, npc_spawns = util.get_random_spawn_points( kwargs['initialOffset'],kwargs['scenario_lane'])   #inverto posizioni di ego rispetto a adversary per il cutin
         else:
             #put a default position here (es. pyoscx.TeleportAction(pyoscx.WorldPosition(-8.6,-80,0.5,4.7)))
             print("default position not setted")
             exit
 
-        targetstart = util.shift_lane(targetstart, kwargs['check_lane'])  ###################cutin
+        targetstart = util.shift_lane(targetstart, kwargs['scenario_lane'])  ###################cutin
         
         ### create catalogs
         catalog = pyoscx.Catalog()
@@ -136,9 +136,9 @@ class Scenario(ScenarioGenerator):
         event.add_trigger(trigger)
         sin_time = pyoscx.TransitionDynamics(pyoscx.DynamicsShapes.linear,pyoscx.DynamicsDimension.distance,25)
 
-        if(kwargs['check_lane'] == 'left'):
+        if(kwargs['scenario_lane'] == 'left'):
             lane_offset = 1
-        elif(kwargs['check_lane'] == 'right'):
+        elif(kwargs['scenario_lane'] == 'right'):
             lane_offset = -1
         else:
             lane_offset = 1

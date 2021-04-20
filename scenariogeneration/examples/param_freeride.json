@@ -19,7 +19,7 @@
             "npc_number": [
                 0
             ],
-            "check_lane": ["central"]
+            "scenario_lane": ["central"]
         }
     ]
 }

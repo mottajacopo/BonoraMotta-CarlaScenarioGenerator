@@ -1113,7 +1113,11 @@ class OpenScenarioParser(object):
             elif private_action.find('ActivateControllerAction') is not None:
                 private_action = private_action.find('ActivateControllerAction')
                 activate = strtobool(private_action.attrib.get('longitudinal'))
-                parameters = {"auto_lane_change": False}   ################################################### added line to avoid change lane
+                if (private_action.attrib.get('lateral') == 'true'):
+                    parameters = {"auto_lane_change": True}
+                else:
+                    parameters = {"auto_lane_change": False}
+                #parameters = {"auto_lane_change": False}   ################################################################################################# added line to avoid change lane
                 atomic = ChangeAutoPilot(actor, activate, parameters=parameters, name=maneuver_name)
             elif private_action.find('ControllerAction') is not None:
                 controller_action = private_action.find('ControllerAction')

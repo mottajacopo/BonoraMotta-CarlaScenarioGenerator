@@ -24,7 +24,7 @@ class Scenario(ScenarioGenerator):
 
         #get random position for ego, target and npcs
         if(kwargs['randomPosition']):
-            egostart, _, npc_spawns = util.get_random_spawn_points( 150,kwargs['check_lane'])
+            egostart, _, npc_spawns = util.get_random_spawn_points( 150,kwargs['scenario_lane'])
         else: 
             #put a default position here (es. pyoscx.TeleportAction(pyoscx.WorldPosition(-8.6,-80,0.5,4.7)))
             print("default position not setted")

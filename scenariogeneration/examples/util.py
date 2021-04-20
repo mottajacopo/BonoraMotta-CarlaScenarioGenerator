@@ -50,7 +50,7 @@ def shift_lane(pos, direction):
 
 
 #get spawn points for ego, adversary and npcs #########################################################################################################################
-def get_random_spawn_points(offset, check_lane):   
+def get_random_spawn_points(offset, scenario_lane):   
 
     current_map = world.get_map()
 
@@ -69,15 +69,15 @@ def get_random_spawn_points(offset, check_lane):
 
 
     #if scenario requested do a lane check to see if left lane is free
-    if(check_lane == "left"):
+    if(scenario_lane == "left"):
         while (not(waypoint.lane_change != carla.libcarla.LaneChange.Right and waypoint.get_left_lane() != None)):
             random_spawn = random.choice(spawn_transforms)
             waypoint = current_map.get_waypoint(random_spawn.location)  
-    elif(check_lane == "right"):
+    elif(scenario_lane == "right"):
         while (not(waypoint.lane_change != carla.libcarla.LaneChange.Left and waypoint.get_right_lane() != None)):
             random_spawn = random.choice(spawn_transforms)
             waypoint = current_map.get_waypoint(random_spawn.location)   
-    elif(check_lane == "both"):
+    elif(scenario_lane == "both"):
         while (not(waypoint.lane_change == carla.libcarla.LaneChange.Both)):
             random_spawn = random.choice(spawn_transforms)
             waypoint = current_map.get_waypoint(random_spawn.location)  
@@ -92,7 +92,7 @@ def get_random_spawn_points(offset, check_lane):
     back_start = carla2pyxosc(back_spawn)
     front_start = carla2pyxosc(front_spawn_offset.transform)
 
-    npc_spawns = get_random_npc_spawn(current_map, front_spawn_offset.transform, 150, offset, check_lane)
+    npc_spawns = get_random_npc_spawn(current_map, front_spawn_offset.transform, 150, offset, scenario_lane)
 
 
     return back_start, front_start, npc_spawns 
@@ -147,7 +147,7 @@ def carla2pyxosc(spawn):
 
 
 # generate npcs positions #########################################################################################################################
-def get_random_npc_spawn(current_map, ego_spawn,radius, offset, check_lane):
+def get_random_npc_spawn(current_map, ego_spawn,radius, offset, scenario_lane):
 
     npc_spawns = []
 
@@ -160,9 +160,9 @@ def get_random_npc_spawn(current_map, ego_spawn,radius, offset, check_lane):
     ego_waypoint = current_map.get_waypoint(ego_spawn.location)
     ego_lane_id = ego_waypoint.lane_id
 
-    if (check_lane == "left" and ego_waypoint.get_left_lane() != None):
+    if (scenario_lane == "left" and ego_waypoint.get_left_lane() != None):
         lane_change_id = ego_waypoint.get_left_lane().lane_id
-    elif(check_lane == "right" and ego_waypoint.get_right_lane() != None):
+    elif(scenario_lane == "right" and ego_waypoint.get_right_lane() != None):
         lane_change_id = ego_waypoint.get_right_lane().lane_id
     else:
         lane_change_id = 999

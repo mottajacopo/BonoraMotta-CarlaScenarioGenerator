@@ -25,7 +25,7 @@
             "npc_number": [
                 20
             ],
-            "check_lane": ["left"]
+            "scenario_lane": ["left"]
         }
     ]
 }
